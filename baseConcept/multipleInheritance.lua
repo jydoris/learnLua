@@ -8,7 +8,6 @@ function profile:getName()
 end
 
 local School = {}
-
 function School:setSchoolName(name)
 	self.schooName = name
 end
@@ -26,8 +25,8 @@ local function search(k, plist)
 	end
 	return
 end
-function createClass(...)
 
+function createClass(...)
 	local t={}
 	setmetatable(t, {__index = function(t, k) return search(k, arg) end})
 
